@@ -1,0 +1,61 @@
+"""
+from home.models import *
+
+brand = Brand.objects.get(id = 2)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'Brand' is not defined
+exit()
+(.venv) PS C:\Users\abhis\PycharmProjects\Django_learning\firstproject> python .\manage.py makemigrations
+Migrations for 'home':
+  home\migrations\0002_brand_products.py
+    + Create model Brand
+    + Create model Products
+(.venv) PS C:\Users\abhis\PycharmProjects\Django_learning\firstproject> python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, home, sessions
+Running migrations:
+  Applying home.0002_brand_products... OK
+(.venv) PS C:\Users\abhis\PycharmProjects\Django_learning\firstproject>
+(.venv) PS C:\Users\abhis\PycharmProjects\Django_learning\firstproject>
+(.venv) PS C:\Users\abhis\PycharmProjects\Django_learning\firstproject> python .\manage.py shell
+17 objects imported automatically (use -v 2 for details).
+
+Python 3.12.3 (tags/v3.12.3:f6650f9, Apr  9 2024, 14:05:25) [MSC v.1938 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+from home.models import *
+Brand.objects.create(brand_name="Patanjali (Indian)")
+<Brand: Brand object (1)>
+brand_names = ["Samsung", "Apple", "Voltas", "TVS", "Hero", "Adani"]
+
+for x in brand_names:
+...     Brand.objects.create(brand_name=x)
+...
+<Brand: Brand object (2)>
+<Brand: Brand object (3)>
+<Brand: Brand object (4)>
+<Brand: Brand object (5)>
+<Brand: Brand object (6)>
+<Brand: Brand object (7)>
+
+brand = Brand.objects.get(id=3)
+
+Products(product_name = "Macbook", brand = Brand.objects.get(id = 3))
+<Products: Products object (None)>
+Products(product_name = "Macbook", brand = Brand.objects.get(id = 3)).save()
+brand = Brand.objects.get(id=1)
+
+Products.create(product_name = "Soup", brand = brand)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: type object 'Products' has no attribute 'create'
+Products.objects.create(product_name = "Soup", brand = brand)
+<Products: Products object (2)>
+"""
+
+
+from home.models import Author, Book
+def handle():
+    book_count = Book.objects.count()
+    print(book_count)

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %} Voting {% endblock %}
+{% block content %}
+
+{% if age >= 18 %}
+<h1>You are eligible to vote</h1>
+{% else %}
+<h1>You are not eligible to vote</h1>
+{% endif %}
+
+{% endblock %}

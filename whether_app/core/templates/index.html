@@ -1,0 +1,15 @@
+<html>
+<head>
+  <title>Whether App</title>
+</head>
+<body>
+    <H1>Whether APP</H1>
+    <form method="post">
+      {% csrf_token %}
+      <input type="text" name="city" placeholder="Enter City Name">
+      <div class="error-name-list"></div>
+
+      <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
