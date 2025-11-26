@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            /*color: var(--content_color);*/
+            background-color: antiquewhite;
+        }
+        .count-tags {
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(200, 194, 194, 0.13);
+            border: 1px solid rgba(200, 194, 194, 0.7);
+            border-radius: 4px;
+            padding: 1px 20px;
+        }
+        .tag-number {
+            text-align: center;
+            font-size: 3rem;
+        }
+        .content-wrapper {
+            margin: auto;
+            margin-top: 40px;
+            max-width: 1000px;
+            padding: 25px;
+            background-color: rgba(200, 194, 194, 0.13);
+            border-radius: 4px;
+            /*border: 2px solid #afacac;*/
+        }
+        table {
+            width: 100%;
+            border-radius: 4px;
+        }
+        .content-wrapper table, th, td {
+            border: 1px solid #afacac;
+            border-collapse: collapse;
+        }
+        .problems {
+            text-align: start;
+            padding: 10px;
+        }
+        th > input[type="checkbox"] {
+            transform: scale(1.5);
+        }
+        .sno {
+            text-align: center;
+            width: 8%;
+        }
+        .status {
+            width: 8%;
+        }
+        thead {
+            background-color: #353535;
+            color: white;
+        }
+        details{
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section class="wrapper">
+        <h1 style="text-align: center;">DSA Tracker For Abhishek</h1>
+        <div style="display: flex; flex-direction: row; justify-content: space-evenly;">
+            <div class="count-tags">
+                <h2>Total Questions</h2>
+                <span class="tag-number">{{ total_questions }}</span>
+            </div>
+            <div class="count-tags">
+                <h2>Solved Questions!</h2>
+                <span class="tag-number">{{total_solved}}</span>
+            </div>
+            <div class="count-tags">
+                <h2>UnSolved Questions!</h2>
+                <span class="tag-number">{{total_unsolved}}</span>
+            </div>
+        </div>
+    </section>
+    <section class="content-wrapper">
+        {% for topic in topics %}
+            <h2>{{ forloop.counter }}. {{ topic.topic_name }}</h2>
+                {% for pattern in topic.patterns %}
+                    <details style="margin-botton: 10px;">
+                        <summary>
+                            <span style="font-size:1.2rem; font-weight: bold;">
+                                Pattern - {{ pattern.pattern_name }}
+                            </span>
+                        </summary>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="sno">S.No</th>
+                                    <th style="text-align: center; padding: 8px;">Problems</th>
+                                    <th class="status">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for question in pattern.questions %}
+                                    <tr>
+                                        <th class="sno">{{ forloop.counter }}</th>
+                                        <th class="problems"><a href='{{question.question_URL | default:"#"}}'>{{ question.question_heading }}</a></th>
+                                        <th class="status">
+                                            <form method="post" action="{% url 'update_status' question.id %}">
+                                                {% csrf_token %}
+                                                <input type="checkbox"
+                                                       name="status"
+                                                       value="true"
+                                                       onchange="this.form.submit();"
+                                                       {% if question.solved == True %}checked{% endif %}
+                                                >
+                                            </form>
+                                        </th>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </details>
+                <hr>
+                <br>
+            {% endfor %}
+        {% endfor %}
+    </section>
+</body>
+</html>
