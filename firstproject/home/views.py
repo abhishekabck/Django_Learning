@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from home.forms import StudentForm
-from home.models import Student, Student2
+from .models import *
 from django.db.models import Q
+from django.contrib.postgres.search import SearchVector
 
 # Create your views here.
 def index(request):
@@ -20,7 +21,6 @@ def index(request):
         )
         return redirect("/thank-you")
     return render(request, "index.html", context)
-
 def contact(request):
     return HttpResponse("Thank you Contact us!!")
 
@@ -70,3 +70,19 @@ def search_page(request):
             students = students.filter(age__gte = 22, age__lte = 25).order_by('age')
     context = {'students': students, 'search': search}
     return render(request, "search.html", context)
+
+def product(request):
+    search = request.GET.get("search", "")
+    print(search)
+    context = {
+        "products": Product.objects.all(),
+        'search': search,
+    }
+    if search:
+        # context['products'] = Product.objects.filter(description__search=search) # using full text search
+        # search vector 
+        context["products"] = Product.objects.annotate(
+            search = SearchVector('title', 'category', 'description')
+        ).filter(search=search)
+
+    return render(request, "product.html", context)

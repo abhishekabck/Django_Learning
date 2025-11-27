@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    body {
+        width: 95% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+</style>
+<div class = "container-fluid m-5">
+    <form>
+        <div class="row" style="margin-bottom: 5px;">
+            <div class="col-12", style="display: flex; justify-content: center; flex-direction: row; gap: 20px;">
+                <input name="search" class="form-control" type="text" placeholder="Search.." value="{{ search }}"/>
+                <button class="btn btn-success" style="height:100%">Search</button>
+            </div>
+        </div>
+
+    </form>
+    <table class="table .table-group-divider">
+      <thead>
+        <tr>
+            <th scope="col">S.No</th>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Category</th>
+            <th scope="col">Price</th>
+            <th scope="col">Brand</th>
+            <th scope="col">SKU</th>
+            <th scope="col">Thumbnail</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+      {% for product in products %}
+        <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td>{{ product.title }}</td>
+            <td>{{ product.description }}</td>
+            <td>{{ product.category }}</td>
+            <td>{{ product.price }}</td>
+            <td>{{ product.brand }}</td>
+            <td>{{ product.sku }}</td>
+            <td><img src="{{ product.thumbnail }}" width="80px" height="80px"/></td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+</div>
+
+{% endblock %}%}

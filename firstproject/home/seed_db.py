@@ -63,3 +63,6 @@ def generate_fake_books(records = 10) -> None:
             published_date = book_published_date,
         )
     print("Books generated successfully!")
+
+
+# Model Data Generation for FullText Search

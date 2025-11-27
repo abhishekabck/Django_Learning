@@ -52,3 +52,12 @@ class Student2(models.Model):
     age = models.IntegerField()
     gender = models.CharField(max_length=10, choices=Student.gender_choices, default='male')
     upload_file = models.FileField(upload_to='files/', null=True, blank=True)
+
+class Product(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.TextField()
+    category = models.CharField(max_length=100)
+    price = models.FloatField()
+    brand = models.CharField(max_length=100)
+    sku = models.CharField(max_length=100)
+    thumbnail = models.URLField(max_length=1000)

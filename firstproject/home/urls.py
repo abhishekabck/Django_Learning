@@ -1,8 +1,9 @@
 from django.urls import path
-from .views import index, contact, dynamic_route, table, dynamic_route_error, vote_eligibility, Thankyou, search_page
+from .views import index, contact, dynamic_route, table, dynamic_route_error, vote_eligibility, Thankyou, search_page, product
 
 urlpatterns = [
-    path('', index),
+    path('', product, name='product_url'),
+    path('form/', index),
     path('contact/', contact),
     path('dynamic_route/<int:number>', dynamic_route),
     path('dynamic_route/<string>', dynamic_route_error),

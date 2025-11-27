@@ -83,8 +83,8 @@ DATABASES = {
         'NAME': 'ExpenseTracker',
         'USER': 'adminuser',
         'PASSWORD': '6cN404D61D',
-        'HOST': '100.111.124.10',
-        'PORT': '55432',
+        'HOST': 'localhost',
+        'PORT': '5433',
      }
 }
 
