@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from home.forms import StudentForm
 from .models import *
 from django.db.models import Q
-from django.contrib.postgres.search import SearchVector
+from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank, SearchHeadline
 
 # Create your views here.
 def index(request):
@@ -80,9 +80,36 @@ def product(request):
     }
     if search:
         # context['products'] = Product.objects.filter(description__search=search) # using full text search
-        # search vector 
+        # search vector
+        # context["products"] = Product.objects.annotate(
+        #     search = SearchVector('title', 'category', 'description')
+        # ).filter(search=search)
+        # breaking search vector
+        # context["products"] = Product.objects.annotate(
+        #     search = SearchVector('title') + SearchVector('category') + SearchVector('description')
+        # ).filter(search=search)
+        
+        '''Search Query + Search Vector + Search Rank'''
+        query = SearchQuery(search)
+        # vector = SearchVector('title', 'category', 'brand', 'sku')
+        # rank = SearchRank(vector, query)
+        # context["products"] = Product.objects.annotate(
+        #     rank = rank
+        # ).filter(rank__gte = 0.3).order_by('-rank')
+        
+        '''Weighted Query: A Technique of Assigning weight(priority) to categories(title, description)'''
+        vector = (
+            SearchVector('title', weight="A") +
+            SearchVector('category', weight="B") +
+            SearchVector('description', weight="C")
+        )
+        rank = SearchRank(vector, query)
         context["products"] = Product.objects.annotate(
-            search = SearchVector('title', 'category', 'description')
-        ).filter(search=search)
+            # headline = SearchHeadline(
+            #     # Usually used to search for something in html format
+            # ),
+            rank = rank
+        ).exclude(rank=0).order_by('-rank')
+        
 
     return render(request, "product.html", context)

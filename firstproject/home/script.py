@@ -2,8 +2,8 @@ from django.db.models import Subquery, OuterRef
 from .models import Product
 import requests
 
-def generate():
-    url = "https://dummyjson.com/products?limit=300"
+def generate(records):
+    url = f"https://dummyjson.com/products?limit={records}"
     response = requests.get(url)
     data = response.json()
 
@@ -15,7 +15,7 @@ def generate():
                 description = product_data['description'],
                 category = product_data['category'],
                 price = product_data['price'],
-                brand = product_data['brand'],
+                brand = product_data.get('brand', 'Unknown'),
                 sku = product_data['sku'],
                 thumbnail = product_data['thumbnail'],
             )
