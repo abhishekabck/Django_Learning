@@ -2,8 +2,10 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from home.forms import StudentForm
 from .models import *
-from django.db.models import Q
-from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank, SearchHeadline
+from django.db.models import Q, Max
+from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank, TrigramSimilarity
+# from django.contrib.postgres.search import SearchHeadline
+import math
 
 # Create your views here.
 def index(request):
@@ -71,7 +73,7 @@ def search_page(request):
     context = {'students': students, 'search': search}
     return render(request, "search.html", context)
 
-def product(request):
+def product1(request):
     search = request.GET.get("search", "")
     print(search)
     context = {
@@ -113,3 +115,47 @@ def product(request):
         
 
     return render(request, "product.html", context)
+
+'''TriGramSimilarity'''
+def product(request):
+    
+    brands = Product.objects.distinct('brand').order_by('brand')
+    categories = Product.objects.distinct('category').order_by('category')
+    max_price = 40000
+    print(max_price)
+    if search := request.GET.get('search'):
+        query = SearchQuery(search)
+        vector = SearchVector(
+            'title',
+            'description',
+            'category',
+            'brand',
+        )
+        rank = SearchRank(vector, query)
+        result = Product.objects.annotate(
+            rank = rank,
+            similarity = TrigramSimilarity('title', search)
+            + TrigramSimilarity('description', search) +
+            TrigramSimilarity('category', search) +
+            TrigramSimilarity('brand', search)
+        ).filter(Q(rank__gte = 0.3) | Q(similarity__gte = 0.3)).distinct().order_by('-rank', '-similarity')
+        
+    else:
+        result = Product.objects.all()
+    
+    if brand:=request.GET.get('brand'):
+        result = result.filter(brand__icontains=brand)
+        
+    if category:=request.GET.get('category'):
+        result = result.filter(category__icontains=category)
+    
+    if request.GET.get('min_price') and request.GET.get("max_price"):
+        min_price = float(request.GET.get('min_price'))
+        max_price = float(request.GET.get('max_price'))
+        result = result.filter(price__gte = min_price, price__lte = max_price)
+    
+    return render(request, 'trigramSimilarity.html', context={
+        'products': result, 'search': request.GET.get('search', ""),
+        'brands': brands, 'categories': categories,
+        'maxPrice': max_price,
+        })

@@ -5,6 +5,7 @@ from .models import *
 
 # Create your views here.
 def dsaTracker1(request):
+    import pandas as pd
     data = pd.read_csv(r"C:\Users\abhis\PycharmProjects\Django_learning\firstproject\dsaTracker\dsaquestions.csv")
     bool_idx = data[data.columns[1]].isnull()
     topics = data[bool_idx]
@@ -47,3 +48,11 @@ def update_status(request, id):
     question.solved = solved
     question.save()
     return redirect("/dsa-tracker")  # use named URL instead of hardcoded path
+
+@require_POST
+def update_url(request, id):
+    url = request.POST.get('url')
+    question = DSAPatternQuestions.objects.filter(id=id)[0]
+    question.question_URL = url
+    question.save()
+    return redirect("/dsa-tracker")

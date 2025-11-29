@@ -22,3 +22,8 @@ class DSAPatternQuestions(models.Model):
     question_URL = models.URLField(null=True, blank=True)
     solved = models.BooleanField(default=False)
     solved_date = models.DateTimeField(null=True, blank=True)
+
+    def have_url(self):
+        return self.question_URL != None
+    
+    

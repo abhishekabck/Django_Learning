@@ -1,5 +1,8 @@
 from django.urls import path
-from .views import index, contact, dynamic_route, table, dynamic_route_error, vote_eligibility, Thankyou, search_page, product
+from .views import (index, contact, dynamic_route,
+                    table, dynamic_route_error,
+                    vote_eligibility, Thankyou,
+                    search_page, product)
 
 urlpatterns = [
     path('', product, name='product_url'),
