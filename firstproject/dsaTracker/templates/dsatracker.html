@@ -121,7 +121,7 @@
                                     <tr>
                                         <th class="sno">{{ forloop.counter }}</th>
                                         <th class="problems" {% if question.have_url == True %}colspan = 2 style="width:70%;"{% endif %}>
-                                                <a href='{{question.question_URL | default:"#"}}'>
+                                                <a href='{{question.question_URL | default:"#"}}' target='_blank'>
                                                     {{ question.question_heading }}
                                                 </a>
                                         </th>
