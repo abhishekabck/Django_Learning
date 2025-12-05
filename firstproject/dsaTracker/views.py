@@ -1,6 +1,7 @@
-from django.http import HttpResponse
+# from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.views.decorators.http import require_POST
+from django.contrib.postgres.search import TrigramSimilarity
 from .models import *
 
 # Create your views here.
@@ -37,7 +38,25 @@ def dsaTracker(request):
         'total_questions': DSAPatternQuestions.objects.count(),
         'total_solved': DSAPatternQuestions.objects.filter(solved=True).count(),
     }
+    if request.method == "POST":
+        question = request.POST.get("search_question")
+        if question:
+            DSAPattern.s_question = question
+            DSATopics.s_question = question
+            context["topics"] = DSATopics.objects.annotate(
+                similarity = TrigramSimilarity("dsapattern__dsapatternquestions__question_heading", question)
+            ).filter(similarity__gte = 0.1).order_by("id", "-similarity").distinct("id")
+    else:
+        DSAPattern.s_question = None
+        DSATopics.s_question = None
+        question = ""
+        
     context["total_unsolved"] = context["total_questions"] - context["total_solved"]
+    context["search_question"] = question
+    context["topics_length"] = len(context["topics"])
+    with open("test.txt", "w") as file:
+        for q in context["topics"]:
+            file.write(str(q)+"\n")
     return render(request, "dsaTracker.html", context)
 
 
