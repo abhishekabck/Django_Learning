@@ -1,0 +1,70 @@
+from django.shortcuts import render
+# from django.http import HttpResponse
+
+# Create your views here.
+base_url = "https://aktuexams.in/AKTUSUMMER/StudentServices/"
+python_urls = [
+    "ScriptImages/Final0015000012674210170000581211513.Png",
+    "ScriptImages/Final0015000012674210170000681211924.Png",
+    "ScriptImages/Final0015000012674210170000781211535.Png",
+    "ScriptImages/Final0015000012674210170000881211396.Png",
+    "ScriptImages/Final0015000012674210170000981211259.Png",
+    "ScriptImages/Final001500001267421017000108121471.Png",
+    "ScriptImages/Final001500001267421017000118121675.Png",
+    "ScriptImages/Final001500001267421017000128121269.Png",
+    "ScriptImages/Final001500001267421017000138121364.Png",
+    "ScriptImages/Final001500001267421017000148121646.Png",
+    "ScriptImages/Final001500001267421017000158121756.Png",
+    "ScriptImages/Final001500001267421017000168121741.Png",
+    "ScriptImages/Final001500001267421017000178121226.Png",
+    "ScriptImages/Final001500001267421017000188121571.Png",
+    "ScriptImages/Final001500001267421017000198121470.Png",
+    "ScriptImages/Final001500001267421017000208126842.Png",
+    "ScriptImages/Final001500001267421017000218126969.Png",
+    "ScriptImages/Final001500001267421017000228126642.Png",
+    "ScriptImages/Final001500001267421017000238126159.Png",
+    "ScriptImages/Final001500001267421017000248126988.Png",
+    "ScriptImages/Final001500001267421017000258126942.Png",
+    "ScriptImages/Final001500001267421017000268126600.Png",
+    "ScriptImages/Final001500001267421017000278126368.Png",
+    "ScriptImages/Final001500001267421017000288126338.Png",
+    "ScriptImages/Final001500001267421017000298126839.Png",
+    "ScriptImages/Final001500001267421017000308126310.Png",
+    "ScriptImages/Final00150000126742101700031812693.Png",
+]
+
+os_urls = [
+    "ScriptImages/Final004800001420161094000058126767.Png",
+    "ScriptImages/Final00480000142016109400006812666.Png",
+    "ScriptImages/Final004800001420161094000078126161.Png",
+    "ScriptImages/Final004800001420161094000088126678.Png",
+    "ScriptImages/Final004800001420161094000098126538.Png",
+    "ScriptImages/Final004800001420161094000108126601.Png",
+    "ScriptImages/Final004800001420161094000118126258.Png",
+    "ScriptImages/Final004800001420161094000128127306.Png",
+    "ScriptImages/Final004800001420161094000138127525.Png",
+    "ScriptImages/Final004800001420161094000148127136.Png",
+    "ScriptImages/Final004800001420161094000158127464.Png",
+    "ScriptImages/Final004800001420161094000168127168.Png",
+    "ScriptImages/Final004800001420161094000178127326.Png",
+    "ScriptImages/Final00480000142016109400018812745.Png",
+    "ScriptImages/Final004800001420161094000198127499.Png",
+    "ScriptImages/Final004800001420161094000208127516.Png",
+    "ScriptImages/Final004800001420161094000218127845.Png",
+    "ScriptImages/Final004800001420161094000228127392.Png",
+    "ScriptImages/Final0048000014201610940002381273.Png",
+    "ScriptImages/Final004800001420161094000248127613.Png",
+    "ScriptImages/Final004800001420161094000258127223.Png",
+    "ScriptImages/Final004800001420161094000268127426.Png",
+    "ScriptImages/Final004800001420161094000278127255.Png",
+    "ScriptImages/Final004800001420161094000288127646.Png",
+    "ScriptImages/Final004800001420161094000298127850.Png",
+    "ScriptImages/Final004800001420161094000308127179.Png",
+    "ScriptImages/Final004800001420161094000318127227.Png",
+]
+def index(requests):
+    context = {
+        'python_urls': [base_url + url for url in python_urls],
+        'os_urls':  [base_url + url for url in os_urls]
+    }
+    return render(requests, "ak_notes.html", context)

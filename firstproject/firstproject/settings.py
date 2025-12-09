@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'home',
     'orm_practice',
     'dsaTracker',
+    'aktu_notes_gen'
 ]
 
 MIDDLEWARE = [
