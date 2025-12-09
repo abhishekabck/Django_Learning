@@ -46,6 +46,9 @@ def dsaTracker(request):
             context["topics"] = DSATopics.objects.annotate(
                 similarity = TrigramSimilarity("dsapattern__dsapatternquestions__question_heading", question)
             ).filter(similarity__gte = 0.1).order_by("id", "-similarity").distinct("id")
+        else:
+            DSAPattern.s_question = None
+            DSATopics.s_question = None
     else:
         DSAPattern.s_question = None
         DSATopics.s_question = None
