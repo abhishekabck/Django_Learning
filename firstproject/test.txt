@@ -1,15 +1,9 @@
 Question Id:1 Question Name:Two Pointer Patterns
 Question Id:2 Question Name:Sliding Window Patterns
 Question Id:3 Question Name:Tree Traversal Patterns (DFS & BFS)
-Question Id:4 Question Name:Graph Traversal Patterns (DFS & BFS)
 Question Id:5 Question Name:Dynamic Programming (DP) Patterns
-Question Id:6 Question Name:Heap (Priority Queue) Patterns
 Question Id:7 Question Name:Backtracking Patterns
 Question Id:8 Question Name:Greedy Patterns
 Question Id:9 Question Name:Binary Search Patterns
 Question Id:10 Question Name:Stack Patterns
-Question Id:11 Question Name:Bit Manipulation Patterns
 Question Id:12 Question Name:Linked List Manipulation Patterns
-Question Id:13 Question Name:Array/Matrix Manipulation Patterns
-Question Id:14 Question Name:String Manipulation Patterns
-Question Id:15 Question Name:Design Patterns

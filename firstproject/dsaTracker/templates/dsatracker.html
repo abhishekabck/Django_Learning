@@ -236,7 +236,7 @@
         <div class="search_wrapper">
             <form method="post" class="search_form">
                 {% csrf_token %}
-                <input name="search_question" type="text" class="search_input" placeholder="Search your question here..." value={{search_question}}>
+                <input name="search_question" type="text" class="search_input" placeholder="Search your question here..." value="{{search_question}}">
                 <button class="search_submit" type="submit"><i class="fa-solid fa-magnifying-glass"></i><span>Search</span></button>
             </form>
         </div>
