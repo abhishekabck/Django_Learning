@@ -1,8 +1,10 @@
 # from django.http import HttpResponse
-from django.shortcuts import render, redirect
-from django.views.decorators.http import require_POST
+from django.http import JsonResponse
+from django.shortcuts import render, redirect, get_object_or_404
+from django.views.decorators.http import require_http_methods, require_POST
 from django.contrib.postgres.search import TrigramSimilarity
 from .models import *
+import json
 
 # Create your views here.
 def dsaTracker1(request):
@@ -61,18 +63,23 @@ def dsaTracker(request):
     return render(request, "dsaTracker.html", context)
 
 
-@require_POST
+@require_http_methods(["PUT"])
 def update_status(request, id):
-    solved = request.POST.get("status") == "true"  # lowercase 'true'
-    question = DSAPatternQuestions.objects.filter(id=id)[0]
+    # Django doesn't parse PUT data into request.POST by default
+    # You need to access request.body and decode JSON or form data
+    data = json.loads(request.body.decode("utf-8"))
+
+    solved = str(data.get("status")).lower() == "true"
+    question = get_object_or_404(DSAPatternQuestions, id=id)
     question.solved = solved
     question.save()
-    return redirect("/dsa-tracker")  # use named URL instead of hardcoded path
+    return JsonResponse({"message": "Status updated", "id": question.id, "solved": question.solved})
 
-@require_POST
+@require_http_methods(["PUT"])
 def update_url(request, id):
-    url = request.POST.get('url')
-    question = DSAPatternQuestions.objects.filter(id=id)[0]
+
+    url = json.loads(request.body.decode("utf-8")).get("url")
+    question = get_object_or_404(DSAPatternQuestions, id=id)
     question.question_URL = url
     question.save()
-    return redirect("/dsa-tracker")
+    return JsonResponse({"message": "URL updated", "id": question.id, "url": question.question_URL})

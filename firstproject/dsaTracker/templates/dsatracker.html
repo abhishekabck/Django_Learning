@@ -2,216 +2,9 @@
 <head>
     <meta charset="UTF-8">
     <title>DSA Tracker</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <style>
-        /* Define default (light mode) variables */
-        :root {
-            --bg-color: antiquewhite;
-            --card-bg: rgba(200, 194, 194, 0.13);
-            --card-border: rgba(200, 194, 194, 0.7);
-            --text-color: black;
-            --table-border: #afacac;
-            --thead-bg: #353535;
-            --thead-text: white;
-            --btn-bg: black;
-            --btn-circle-bg: antiquewhite;
-            --search_text_color: black;
-        }
 
-        /* Dark mode overrides */
-        .dark-mode {
-            --bg-color: #242222ff;
-            --card-bg: rgba(255, 255, 255, 0.05);
-            --card-border: rgba(255, 255, 255, 0.2);
-            --text-color: #ede9efff;
-            --table-border: #716b6bff;
-            --thead-bg: #1f1f1f;
-            --thead-text: #e0e0e0;
-            --search_text_color: antiquewhite;
-            --btn-bg: #f5f5f5;
-            --btn-circle-bg: #121212;
-        }
-
-        body {
-            padding: 0;
-            margin: 0;
-            /*color: var(--content_color);*/
-            {% comment %} background-color: antiquewhite; {% endcomment %}
-        }
-        .count-tags {
-            display: flex;
-            flex-direction: column;
-            {% comment %} background-color: rgba(200, 194, 194, 0.13); {% endcomment %}
-            border: 1px solid rgba(200, 194, 194, 0.7);
-            border-radius: 4px;
-            padding: 1px 20px;
-        }
-        .tag-number {
-            text-align: center;
-            font-size: 3rem;
-        }
-        .content-wrapper {
-            margin: auto;
-            margin-top: 10px;
-            max-width: 1000px;
-            padding: 25px;
-            {% comment %} background-color: rgba(200, 194, 194, 0.13); {% endcomment %}
-            border-radius: 4px;
-            /*border: 2px solid #afacac;*/
-        }
-        table {
-            width: 100%;
-            border-radius: 4px;
-        }
-        .content-wrapper table, th, td {
-            border: 1px solid #afacac;
-            border-collapse: collapse;
-        }
-        .problems {
-            text-align: start;
-            padding: 10px;
-            border-right: none;
-            width: 50%;
-        }
-        .problems > a {
-            text-decoration: none;
-            color: black;
-            pointer: cursor;
-        }
-        th > input[type="checkbox"] {
-            transform: scale(1.5);
-        }
-        .sno {
-            text-align: center;
-            width: 8%;
-        }
-        .status {
-            width: 10%;
-        }
-        thead {
-            {% comment %} background-color: #353535; {% endcomment %}
-            color: white;
-        }
-        details{
-            padding-left: 10px;
-        }
-        .update-url-btn {
-            cursor:pointer;
-        }
-        .up-url-btn {
-            width: 30%;
-        }
-        .url-update {
-            padding: 3px 0px 3px 5px;
-            border-radius: 2px;
-            border:1px solid black;
-        }
-        #cm-btn {
-            width: 50px;
-            height: 25px;
-            align-self: center;
-            justify-self: center;
-            color: black;
-            {% comment %} background-color: black; {% endcomment %}
-            border-radius: 15px;
-        }
-        #cm-btn-circle {
-            position:absolute;
-            cursor: pointer;
-            z-index: 100;
-            width: 20px;
-            height: 20px;
-            top: 30px;
-            {% comment %} margin-left: -20px; {% endcomment %}
-            border-radius: 50%;
-            {% comment %} background-color: antiquewhite; {% endcomment %}
-        }
-
-        {% comment %} Adding Toggle Button Animation {% endcomment %}
-
-        /* Apply variables */
-        body {
-            padding: 0;
-            margin: 0;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-        }
-
-        .count-tags {
-            background-color: var(--card-bg);
-            border: 1px solid var(--card-border);
-        }
-
-        .content-wrapper {
-            background-color: var(--card-bg);
-        }
-
-        .content-wrapper table, th, td {
-            border: 1px solid var(--table-border);
-        }
-
-        .problems > a {
-            color: var(--text-color);
-        }
-
-        thead {
-            background-color: var(--thead-bg);
-            color: var(--thead-text);
-        }
-
-        .url-update {
-            border: 1px solid var(--text-color);
-        }
-
-        #cm-btn {
-            background-color: var(--btn-bg);
-        }
-
-        #cm-btn-circle {
-            background-color: var(--btn-circle-bg);
-        }
-
-        .search_wrapper {
-            max-width: 1040px;
-            width: 100%;
-            height: 50px;
-            margin-top: 30px;
-            justify-self: center;
-        }
-        .search_form {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 20px;
-            justify-content: space-between;
-        }
-        .search_input {
-            flex-grow: 3;
-            height: 40px;
-            background-color: rgba(223, 219, 219, 0.24);
-            color: var(--search_text_color);
-            border-radius: 15px;
-            font-size: 15px;
-            padding-left: 10px;
-            outline: none;
-        }
-        .search_submit {
-            width: 120px;
-            height: 45px;
-            background-color: goldenrod;
-            border-radius: 15px;
-            cursor: pointer;
-            padding: 10px 0px;
-        }
-        .search_submit > i {
-            margin-left: 2px;
-        }
-
-        .search_form > span {
-            font-size: 30px;
-            font-weight: 600;
-        }
-    </style>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/dsa_tracker.css' %}">
 </head>
 <body>
     <section class="wrapper">
@@ -263,26 +56,32 @@
                                 {% for question in pattern.questions %}
                                     <tr>
                                         <th class="sno">{{ forloop.counter }}</th>
-                                        <th class="problems" {% if question.have_url == True %}colspan = 2 style="width:70%;"{% endif %}>
-                                                <a href='{{question.question_URL | default:"#"}}' target='_blank'>
+                                        <th class="problems" {% if question.have_url == True %}colspan = 2 style="width:70%;"{% endif %} id="problem-{{question.id}}">
+                                                <a href='{{question.question_URL | default:"#"}}' target='_blank' id="question-link-{{question.id}}">
                                                     {{ question.question_heading }}
                                                 </a>
                                         </th>
-                                        <th class="up-url-btn" {% if question.have_url == True %}style="display:none;"{% endif %}>
-                                            <form method="post" action="{% url 'question_update_url' question.id %}">
+                                        <th class="up-url-btn" {% if question.have_url == True %}style="display:none;"{% endif %} id="up-url-{{question.id}}">
+                                            <form onsubmit="return false;">
                                                 {% csrf_token %}
-                                                <input name="url" class="url-update" placeholder="Enter url" value="{{question.question_URL | default:''}}">
-                                                <button class="update-url-btn" type="submit">⏫</button>
+                                                <input id="url-{{question.id}}"
+                                                        name="url"
+                                                        class="url-update"
+                                                        placeholder="Enter url"
+                                                        value="{{question.question_URL | default:''}}">
+                                                <button class="update-url-btn"
+                                                        type="button"
+                                                        onclick="updateQuestionURL({{question.id}})">⏫</button>
                                             </form>
                                         </th>
                                         <th class="status">
-                                            <form method="post" action="{% url 'update_status' question.id %}">
+                                            <form>
                                                 {% csrf_token %}
                                                 <input type="checkbox"
                                                         name="status"
                                                         value="true"
-                                                        onchange="this.form.submit();"
                                                         {% if question.solved == True %}checked{% endif %}
+                                                       onclick="updateQuestionStatus({{question.id}}, this.checked)"
                                                 >
                                             </form>
                                         </th>
@@ -298,28 +97,5 @@
         {% if topics_length == 0 %}<h4>No match found.</h4>{% endif %}
     </section>
 </body>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const btn = document.getElementById("cm-btn");
-        const circle = document.getElementById("cm-btn-circle");
-
-        btn.addEventListener("click", () => {
-            document.body.classList.toggle("dark-mode");
-
-            if (document.body.classList.contains("dark-mode")) {
-                localStorage.setItem("theme", "dark");
-                circle.style.marginLeft = "-20px";   // fixed (removed ;)
-            } else {
-                localStorage.setItem("theme", "light");
-                circle.style.marginLeft = "0px";    // fixed (removed ;)
-            }
-        });
-
-        // Load saved theme on page load
-        if (localStorage.getItem("theme") === "dark") {
-            document.body.classList.add("dark-mode");
-            circle.style.marginLeft = "-20px";
-        }
-    });
-</script>
+<script src="{% static 'js/script.js' %}"></script>
 </html>

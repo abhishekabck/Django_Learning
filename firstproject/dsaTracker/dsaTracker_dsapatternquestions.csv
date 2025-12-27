@@ -1,0 +1,438 @@
+4,4Sum,,f,,1
+64,TwoSum,https://leetcode.com/problems/two-sum/description/,f,,11
+174,Delete and Earn,https://leetcode.com/problems/delete-and-earn/description/,t,,30
+176,Maximum Subarray,https://leetcode.com/problems/maximum-subarray/?envType=problem-list-v2&envId=vg00mwqm&,t,,31
+177,Maximum Sum Circular Subarray,https://leetcode.com/problems/maximum-sum-circular-subarray/description/?envType=problem-list-v2&envId=vg00mwqm&,t,,31
+5,Two Sum II - Input Array Is Sorted,,f,,1
+6,Intersection of Two Arrays,,f,,1
+61,Sliding Window Maximum,https://leetcode.com/problems/sliding-window-maximum/,f,,10
+175,Min Cost Climbing Stairs,https://leetcode.com/problems/min-cost-climbing-stairs/description/,t,,30
+111,01 Matrix,https://leetcode.com/problems/01-matrix/description/?envType=problem-list-v2&envId=vg00mwqm&,f,,19
+179,Maximum Absolute Sum of Any Subarray,https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/description/,t,,31
+112,Rotting Oranges,,f,,19
+113,Shortest Path in Binary Matrix,,f,,19
+168,Climbing Stairs,https://leetcode.com/problems/climbing-stairs/,t,,30
+218,Relative Ranks,,f,,42
+219,Kth Largest Element in a Stream,,f,,42
+220,K Closest Points to Origin,,f,,42
+221,Last Stone Weight,,f,,42
+238,Combinations,,f,,46
+169,Decode Ways,https://leetcode.com/problems/decode-ways/description/,t,,30
+327,Single Number,,f,,70
+328,Single Number II,,f,,70
+329,Missing Number,,f,,70
+1,Container With Most Water,,f,,1
+29,Removing Stars From a String,,f,,5
+45,Longest Repeating Character Replacement,,f,,9
+49,Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit,,f,,9
+68,Binary Tree Zigzag Level Order Traversal,,f,,12
+92,All Nodes Distance K in Binary Tree,,f,,15
+107,Number of Enclaves,,f,,18
+108,Number of Closed Islands,,f,,18
+123,Largest Color Value in a Directed Graph,,f,,21
+128,Find the City With the Smallest Number of Neighbors at a Threshold Distance,,f,,22
+146,Number of Connected Components in an Undirected Graph,,f,,25
+164,Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree,,f,,28
+200,Count Square Submatrices with All Ones,,f,,37
+215,Kth Largest Element in an Array,,f,,42
+234,Single-Threaded CPU,,f,,45
+235,The Number of the Smallest Unoccupied Chair,,f,,45
+236,Meeting Rooms III,,f,,45
+232,Furthest Building You Can Reach,,f,,45
+250,Check if Word Can Be Placed In Crossword,,f,,50
+278,Guess Number Higher or Lower,,f,,59
+292,Minimum Number of Days to Make m Bouquets,,f,,61
+321,Asteroid Collision,,f,,67
+324,Online Stock Span,,f,,68
+336,Count Triplets That Can Form Two Arrays of Equal XOR,,f,,72
+365,Diagonal Traverse,,f,,81
+12,Find the Duplicate Number,,f,,2
+10,Linked List Cycle,,f,,2
+170,House Robber,http://leetcode.com/problems/house-robber/,t,,30
+7,Boats to Save People,,f,,1
+8,Squares of a Sorted Array,,f,,1
+9,3Sum Smaller,,f,,1
+11,Happy Number,,f,,2
+13,Is Subsequence,,f,,2
+15,Remove Nth Node From End of List,,f,,3
+16,Middle of the Linked List,,f,,3
+17,Delete the Middle Node of a Linked List,,f,,3
+18,Remove Duplicates from Sorted Array,,f,,4
+19,Remove Element,,f,,4
+378,Find All Duplicates in an Array,,f,,85
+392,Find the Index of the First Occurrence in a String,,f,,91
+398,Find the Index of the First Occurrence in a String,,f,,92
+426,Product of the Last K Numbers,,f,,93
+439,Prefix and Suffix Search,,f,,94
+20,Sort Colors,,f,,4
+21,Remove Duplicates from Sorted Array II,,f,,4
+22,Move Zeroes,,f,,4
+23,String Compression,,f,,4
+24,Sort Array By Parity,,f,,4
+25,Move Pieces to Obtain a String,,f,,4
+26,Separate Black and White Balls,,f,,4
+27,Backspace String Compare,,f,,5
+28,Crawler Log Folder,,f,,5
+30,Longest Palindromic Substring,,f,,6
+31,Palindromic Substrings,,f,,6
+32,Reverse Words in a String,,f,,7
+33,Reverse String,,f,,7
+34,Reverse Vowels of a String,,f,,7
+35,Reverse String II,,f,,7
+36,Moving Average from Data Stream,,f,,8
+37,Maximum Average Subarray I,,f,,8
+38,Calculate Compressed Mean,,f,,8
+39,Find the Power of K-Size Subarrays I,,f,,8
+40,Find X-Sum of All K-Long Subarrays I,,f,,8
+41,Longest Substring Without Repeating Characters,,f,,9
+42,Minimum Window Substring,,f,,9
+43,Minimum Size Subarray Sum,,f,,9
+44,Contains Duplicate II,,f,,9
+46,Subarray Product Less Than K,,f,,9
+47,Fruit Into Baskets,,f,,9
+48,Max Consecutive Ones III,,f,,9
+50,Longest Subarray of 1's After Deleting One Element,,f,,9
+51,Minimum Operations to Reduce X to Zero,,f,,9
+52,Frequency of the Most Frequent Element,,f,,9
+53,Maximum Sum of Distinct Subarrays With Length K,,f,,9
+54,Take K of Each Character From Left and Right,,f,,9
+55,Continuous Subarrays,,f,,9
+56,Maximum Beauty of an Array After Applying Operation,,f,,9
+57,Find Longest Special Substring That Occurs Thrice I,,f,,9
+58,Maximum Good Subarray Sum,,f,,9
+59,Maximum Frequency of an Element After Performing Operations I,,f,,9
+60,Maximum Frequency of an Element After Performing Operations II 2,,f,,9
+62,Shortest Subarray with Sum at Least K,,f,,10
+63,Jump Game VI,,f,,10
+65,Find All Anagrams in a String,,f,,11
+66,Permutation in String,,f,,11
+67,Binary Tree Level Order Traversal,,f,,12
+69,Binary Tree Right Side View,,f,,12
+70,Find Largest Value in Each Tree Row,,f,,12
+71,Maximum Level Sum of a Binary Tree,,f,,12
+72,Same Tree,,f,,13
+73,Symmetric Tree,,f,,13
+74,Construct Binary Tree from Preorder and Inorder Traversal,,f,,13
+75,Flatten Binary Tree to Linked List,,f,,13
+76,Invert Binary Tree,,f,,13
+77,Binary Tree Paths,,f,,13
+78,Smallest String Starting From Leaf,,f,,13
+79,Binary Tree Inorder Traversal,,f,,14
+80,Validate Binary Search Tree,,f,,14
+81,Binary Search Tree Iterator,,f,,14
+82,Kth Smallest Element in a BST,,f,,14
+83,Find Mode in Binary Search Tree,,f,,14
+84,Minimum Absolute Difference in BST,,f,,14
+85,Maximum Depth of Binary Tree,,f,,15
+86,Balanced Binary Tree,,f,,15
+87,Binary Tree Maximum Path Sum,,f,,15
+88,Binary Tree Postorder Traversal,,f,,15
+89,House Robber III,,f,,15
+90,Find Leaves of Binary Tree,,f,,15
+91,Diameter of Binary Tree,,f,,15
+93,Delete Nodes And Return Forest,,f,,15
+94,Height of Binary Tree After Subtree Removal Queries,,f,,15
+95,Lowest Common Ancestor of a Binary Search Tree,,f,,16
+96,Lowest Common Ancestor of a Binary Tree,,f,,16
+97,Serialize and Deserialize Binary Tree,,f,,17
+98,Subtree of Another Tree,,f,,17
+99,Find Duplicate Subtrees,,f,,17
+100,Surrounded Regions,,f,,18
+101,Number of Islands,,f,,18
+102,Pacific Atlantic Water Flow,,f,,18
+103,Number of Provinces,,f,,18
+104,Max Area of Island,,f,,18
+105,Flood Fill,,f,,18
+106,Keys and Rooms,,f,,18
+2,3Sum,,f,,1
+3,3Sum Closest,,f,,1
+114,Course Schedule,,f,,20
+115,Course Schedule II,,f,,20
+116,Find Eventual Safe States,,f,,20
+117,All Paths from Source Lead to Destination,,f,,20
+118,Course Schedule II,,f,,21
+119,Alien Dictionary,,f,,21
+120,Minimum Height Trees,,f,,21
+121,Sequence Reconstruction,,f,,21
+122,Parallel Courses,,f,,21
+124,Parallel Courses III,,f,,21
+125,Find All Possible Recipes from Given Supplies,,f,,21
+126,Build a Matrix With Conditions,,f,,21
+127,Clone Graph,,f,,22
+129,Copy List with Random Pointer,,f,,22
+130,Clone N-ary Tree,,f,,22
+131,Network Delay Time,,f,,23
+132,Swim in Rising Water,,f,,23
+133,Path with Maximum Probability,,f,,23
+134,Path With Minimum Effort,,f,,23
+135,Number of Ways to Arrive at Destination,,f,,23
+136,Second Minimum Time to Reach Destination,,f,,23
+137,Minimum Weighted Subgraph With the Required Paths,,f,,23
+138,Minimum Obstacle Removal to Reach Corner,,f,,23
+139,Minimum Time to Visit a Cell In a Grid,,f,,23
+140,Find the Safest Path in a Grid,,f,,23
+141,Cheapest Flights Within K Stops,,f,,24
+142,Shortest Path with Alternating Colors,,f,,24
+143,Number of Islands,,f,,25
+144,Graph Valid Tree,,f,,25
+145,Number of Islands II,,f,,25
+147,Number of Provinces,,f,,25
+148,Redundant Connection,,f,,25
+149,Accounts Merge,,f,,25
+150,Sentence Similarity II,,f,,25
+151,Most Stones Removed with Same Row or Column,,f,,25
+152,Largest Component Size by Common Factor,,f,,25
+153,Regions Cut By Slashes,,f,,25
+154,The Earliest Moment When Everyone Become Friends,,f,,25
+155,Course Schedule II,,f,,26
+156,Number of Provinces,,f,,26
+157,Critical Connections in a Network,,f,,26
+158,Maximum Employees to Be Invited to a Meeting,,f,,26
+159,Critical Connections in a Network,,f,,27
+160,Longest Cycle in a Graph,,f,,27
+161,Connecting Cities With Minimum Cost,,f,,28
+162,Min Cost to Connect All Points,,f,,28
+163,Optimize Water Distribution in a Village,,f,,28
+165,Word Ladder,,f,,29
+166,Word Ladder II,,f,,29
+167,Bus Routes,,f,,29
+181,Coin Change,,f,,32
+182,Combination Sum IV,,f,,32
+183,Coin Change II,,f,,32
+186,Word Break,,f,,34
+187,Word Break II,,f,,34
+188,Longest Common Subsequence,,f,,35
+189,Shortest Common Supersequence,,f,,35
+190,Minimum Insertion Steps to Make a String Palindrome,,f,,35
+191,Edit Distance,,f,,36
+192,Delete Operation for Two Strings,,f,,36
+193,Minimum ASCII Delete Sum for Two Strings,,f,,36
+194,Unique Paths,,f,,37
+195,Unique Paths II,,f,,37
+196,Minimum Path Sum,,f,,37
+197,Triangle,,f,,37
+198,Maximal Square,,f,,37
+199,Minimum Falling Path Sum,,f,,37
+201,Burst Balloons,,f,,38
+202,Remove Boxes,,f,,38
+203,Unique Binary Search Trees II,,f,,39
+204,Unique Binary Search Trees,,f,,39
+205,Different Ways to Add Parentheses,,f,,39
+206,Longest Increasing Subsequence,,f,,40
+207,Russian Doll Envelopes,,f,,40
+208,Minimum Number of Removals to Make Mountain Array,,f,,40
+209,Longest Increasing Subsequence II,,f,,40
+210,Best Time to Buy and Sell Stock,,f,,41
+211,Best Time to Buy and Sell Stock II,,f,,41
+212,Best Time to Buy and Sell Stock III,,f,,41
+213,Best Time to Buy and Sell Stock IV,,f,,41
+214,Best Time to Buy and Sell Stock with Cooldown,,f,,41
+109,Count Sub Islands,,f,,18
+110,Detonate the Maximum Bombs,,f,,18
+222,Take Gifts From the Richest Pile,,f,,42
+223,Find Median from Data Stream,,f,,43
+224,Finding MK Average,,f,,43
+225,Merge k Sorted Lists,,f,,44
+226,Find K Pairs with Smallest Sums,,f,,44
+227,Kth Smallest Element in a Sorted Matrix,,f,,44
+228,Smallest Range Covering Elements from K Lists,,f,,44
+229,Meeting Rooms II,,f,,45
+230,Reorganize String,,f,,45
+231,Minimum Cost to Hire K Workers,,f,,45
+233,Maximum Average Pass Ratio,,f,,45
+237,Letter Combinations of a Phone Number,,f,,46
+239,Subsets,,f,,46
+240,Subsets II,,f,,46
+241,Next Permutation,,f,,47
+242,Permutations,,f,,47
+243,Permutation Sequence,,f,,47
+244,Combination Sum,,f,,48
+245,Combination Sum II,,f,,48
+246,Generate Parentheses,,f,,49
+247,Remove Invalid Parentheses,,f,,49
+248,Word Search,,f,,50
+249,Word Search II,,f,,50
+251,Sudoku Solver,,f,,51
+252,N-Queens,,f,,51
+253,Palindrome Partitioning,,f,,52
+254,Palindrome Partitioning II,,f,,52
+255,Pseudo-Palindromic Paths in a Binary Tree,,f,,52
+256,Merge Intervals,,f,,53
+257,Insert Interval,,f,,53
+258,Employee Free Time,,f,,53
+259,Interval List Intersections,,f,,53
+260,Divide Intervals Into Minimum Number of Groups,,f,,53
+261,Jump Game II,,f,,54
+262,Jump Game,,f,,54
+171,House Robber II,https://leetcode.com/problems/house-robber-ii/description/,t,,30
+172,House Robber III,https://leetcode.com/problems/house-robber-iii/description/,t,,30
+184,Partition Equal Subset Sum,https://leetcode.com/problems/partition-equal-subset-sum/description/,t,,33
+178,Maximum Score Of Spliced Array,https://leetcode.com/problems/maximum-score-of-spliced-array/?envType=problem-list-v2&envId=vg00mwqm&,t,,31
+185,Target Sum,https://leetcode.com/problems/target-sum/,t,,33
+180,Maximum Product Subarray,https://leetcode.com/problems/maximum-product-subarray/description/,t,,31
+263,Best Time to Buy and Sell Stock,,f,,55
+264,Best Time to Buy and Sell Stock II,,f,,55
+265,Gas Station,,f,,56
+266,Maximize the Topmost Element After K Moves,,f,,56
+267,Task Scheduler,,f,,57
+268,Reorganize String,,f,,57
+269,Distant Barcodes,,f,,57
+270,Assign Cookies,,f,,58
+271,Candy,,f,,58
+272,Queue Reconstruction by Height,,f,,58
+273,Two City Scheduling,,f,,58
+274,Search Insert Position,,f,,59
+275,Sqrt(x),,f,,59
+276,Search a 2D Matrix,,f,,59
+277,First Bad Version,,f,,59
+279,Single Element in a Sorted Array,,f,,59
+280,Binary Search,,f,,59
+281,Kth Missing Positive Number,,f,,59
+282,Search in Rotated Sorted Array,,f,,60
+283,Search in Rotated Sorted Array II,,f,,60
+284,Find Minimum in Rotated Sorted Array,,f,,60
+285,Find Peak Element,,f,,60
+286,Peak Index in a Mountain Array,,f,,60
+287,Find in Mountain Array,,f,,60
+288,Split Array Largest Sum,,f,,61
+289,Minimize Max Distance to Gas Station,,f,,61
+290,Koko Eating Bananas,,f,,61
+291,Capacity To Ship Packages 6  Within D Days,,f,,61
+293,Minimum Limit of Balls in a Bag,,f,,61
+294,Minimized Maximum of Products Distributed to Any Store,,f,,61
+295,Maximum Candies Allocated to K Children,,f,,61
+296,Find First and Last Position of Element in Sorted Array,,f,,62
+297,Find K Closest Elements,,f,,62
+298,Median of Two Sorted Arrays,,f,,63
+299,Find K-th Smallest Pair Distance,,f,,63
+300,Kth Smallest Element in a Sorted Matrix,,f,,63
+301,Valid Parentheses,,f,,64
+302,Longest Valid Parentheses,,f,,64
+303,Minimum Add to Make Parentheses Valid,,f,,64
+304,Minimum Remove to Make Valid Parentheses,,f,,64
+305,Minimum Number of Swaps to Make the String Balanced,,f,,64
+306,Remove K Digits,,f,,65
+307,Next Greater Element I,,f,,65
+308,Next Greater Element II,,f,,65
+309,Daily Temperatures,,f,,65
+310,Online Stock Span,,f,,65
+311,Sum of Subarray Minimums,,f,,65
+312,Maximum Width Ramp,,f,,65
+313,Final Prices With a Special Discount in a Shop,,f,,65
+314,Find the Most Competitive Subsequence,,f,,65
+315,Evaluate Reverse Polish Notation,,f,,66
+316,Basic Calculator,,f,,66
+317,Basic Calculator II,,f,,66
+318,Basic Calculator III,,f,,66
+319,Simplify Path,,f,,67
+320,Decode String,,f,,67
+322,Min Stack,,f,,68
+323,Maximum Frequency Stack,,f,,68
+216,Top K Frequent Elements,,f,,42
+217,Sort Characters By Frequency,,f,,42
+330,Find the Difference,,f,,70
+331,Number of 1 Bits,,f,,71
+332,Power of Two,,f,,71
+333,Total Hamming Distance,,f,,71
+334,Counting Bits,,f,,72
+335,Parallel Courses II,,f,,72
+337,Power of Two,,f,,73
+338,Power of Four,,f,,73
+339,Remove Duplicates from Sorted List,,f,,74
+340,Reverse Linked List II,,f,,74
+341,Reverse Linked List,,f,,74
+342,Reverse Nodes in k-Group,,f,,74
+343,Palindrome Linked List,,f,,74
+344,Remove Duplicates from Sorted List II,,f,,74
+345,Merge Two Sorted Lists,,f,,75
+346,Merge k Sorted Lists,,f,,75
+347,Add Two Numbers,,f,,76
+348,Plus One Linked List,,f,,76
+349,Intersection of Two Linked Lists,,f,,77
+350,Minimum Index Sum of Two Lists,,f,,77
+351,Swap Nodes in Pairs,,f,,78
+352,Rotate List,,f,,78
+353,Partition List,,f,,78
+354,Reorder List,,f,,78
+355,Odd Even Linked List,,f,,78
+356,Rotate Image,,f,,79
+357,Rotate Array,,f,,79
+358,Transpose Matrix,,f,,79
+359,Spiral Matrix,,f,,80
+360,Spiral Matrix II,,f,,80
+361,Spiral Matrix III,,f,,80
+362,Spiral Matrix IV,,f,,80
+363,Set Matrix Zeroes,,f,,81
+364,Game of Life,,f,,81
+366,Product of Array Except Self,,f,,82
+367,Longest Mountain in Array,,f,,82
+368,Minimum Penalty for a Shop,,f,,82
+369,Plus One,,f,,83
+370,Multiply Strings,,f,,83
+371,Add to Array-Form of Integer,,f,,83
+372,Add Binary,,f,,83
+373,Merge Sorted Array,,f,,84
+374,Squares of a Sorted Array,,f,,84
+375,First Missing Positive,,f,,85
+376,Missing Number,,f,,85
+377,Find the Duplicate Number,,f,,85
+379,Find All Numbers Disappeared in an Array,,f,,85
+380,Palindrome Number,,f,,86
+381,Valid Palindrome,,f,,86
+382,Valid Palindrome II,,f,,86
+383,Group Anagrams,,f,,87
+384,Valid Anagram,,f,,87
+385,Roman to Integer,,f,,88
+386,Integer to Roman,,f,,88
+387,String to Integer (atoi),,f,,89
+388,Valid Number,,f,,89
+389,Multiply Strings,,f,,90
+390,Add Strings,,f,,90
+391,Add Binary,,f,,90
+393,Shortest Palindrome,,f,,91
+394,Repeated String Match,,f,,91
+395,Rotate String,,f,,91
+396,Find Beautiful Indices in the Given Array II,,f,,91
+397,Repeated Substring Pattern,,f,,92
+399,Repeated String Match,,f,,92
+400,LRU Cache,,f,,93
+401,Min Stack,,f,,93
+402,Implement Stack using Queues,,f,,93
+403,Implement Queue using Stacks,,f,,93
+404,Flatten 2D Vector,,f,,93
+405,Encode and Decode Strings,,f,,93
+406,Find Median from Data Stream,,f,,93
+407,Flatten Nested List Iterator,,f,,93
+408,Moving Average from Data Stream,,f,,93
+409,Design Snake Game,,f,,93
+410,Logger Rate Limiter,,f,,93
+411,Design Hit Counter,,f,,93
+412,Design Phone Directory,,f,,93
+413,Insert Delete GetRandom O(1),,f,,93
+414,All O`one Data Structure,,f,,93
+415,LFU Cache,,f,,93
+416,Design Compressed String Iterator,,f,,93
+417,Design Circular Queue,,f,,93
+418,Design Circular Deque,,f,,93
+419,Design Search Autocomplete System,,f,,93
+420,Design HashMap,,f,,93
+421,Range Module,,f,,93
+422,RLE Iterator,,f,,93
+423,Time Based Key-Value Store,,f,,93
+424,Snapshot Array,,f,,93
+425,Tweet Counts Per Frequency,,f,,93
+427,Design a Stack With Increment Operation,,f,,93
+428,Design Most Recently Used Queue,,f,,93
+429,Detect Squares,,f,,93
+430,Stock Price Fluctuation,,f,,93
+431,Design a Text Editor,,f,,93
+432,Smallest Number in Infinite Set,,f,,93
+433,Implement Trie (Prefix Tree),,f,,94
+434,Design Add and Search Words Data Structure,,f,,94
+435,Longest Word in Dictionary,,f,,94
+436,Replace Words,,f,,94
+437,Word Squares,,f,,94
+438,Design Search Autocomplete System,,f,,94
+325,Largest Rectangle in Histogram,,f,,69
+326,Maximal Rectangle,,f,,69
+173,Fibonacci Number,https://leetcode.com/problems/fibonacci-number/,t,,30
